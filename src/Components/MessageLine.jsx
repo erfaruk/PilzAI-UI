@@ -54,8 +54,6 @@ export default function MessageLine({ chatId }) {
         }
     };
     
-    
-
     const renderTextWithCode = (content) => {
         const parts = content.split(/(```[\s\S]*?```)/g);
 
@@ -82,7 +80,7 @@ export default function MessageLine({ chatId }) {
             const code = match[2].trim();
     
             return (
-                <Box key={key} sx={{ position: 'relative', backgroundColor: '#2d2d2d', borderRadius: 1, mt: 2 }}>
+                <Box key={key} sx={{ position: 'relative', backgroundColor: '#2d2d2d', borderRadius: 1, mt: 2, mb:2 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#1e1e1e', borderTopLeftRadius: 1, borderTopRightRadius: 1, p: '4px 8px' }}>
                         <Typography sx={{ color: 'white', fontSize: '0.875rem' }}>{language}</Typography>
                         <Box sx={{ position: 'relative' }}>
@@ -108,8 +106,6 @@ export default function MessageLine({ chatId }) {
             return null;
         }
     };
-    
-    
     
     const isTableFormat = (content) => {
         return content.includes('|') && content.includes('\n');
